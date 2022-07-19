@@ -1,0 +1,20 @@
+docker run -p 15672:15672 -p 5672:5672 --name rabbit-corona rabbitmq:3-management
+
+
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Passw0rd(!)" --name ordermssql -p 1433:1433 mcr.microsoft.com/mssql/server: 2017-latest-ubuntu
+
+
+docker pull mcr.microsoft.com/mssql/server: 2017-latest-ubuntu
+
+docker pull mcr.microsoft.com/mssql/server
+
+
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Passw0rd(!)" --name ordermssql  -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+
+
+
+
+ <ItemGroup>
+    <PackageReference Include="OpenCvSharp4" Version="4.2.0.20200208" />
+    <PackageReference Include="OpenCvSharp4.Windows" Version="4.2.0.20200208" />
+  </ItemGroup>

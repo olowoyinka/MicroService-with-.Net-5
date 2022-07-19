@@ -1,0 +1,12 @@
+C:\Users\olowoyinka\source\repos\FacesAndFaces\CustomerNotification\EmailService\bin\Debug\net5.0\EmailService.deps.json
+C:\Users\olowoyinka\source\repos\FacesAndFaces\CustomerNotification\EmailService\bin\Debug\net5.0\EmailService.dll
+C:\Users\olowoyinka\source\repos\FacesAndFaces\CustomerNotification\EmailService\bin\Debug\net5.0\ref\EmailService.dll
+C:\Users\olowoyinka\source\repos\FacesAndFaces\CustomerNotification\EmailService\bin\Debug\net5.0\EmailService.pdb
+C:\Users\olowoyinka\source\repos\FacesAndFaces\CustomerNotification\EmailService\obj\Debug\net5.0\EmailService.csproj.AssemblyReference.cache
+C:\Users\olowoyinka\source\repos\FacesAndFaces\CustomerNotification\EmailService\obj\Debug\net5.0\EmailService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\olowoyinka\source\repos\FacesAndFaces\CustomerNotification\EmailService\obj\Debug\net5.0\EmailService.AssemblyInfoInputs.cache
+C:\Users\olowoyinka\source\repos\FacesAndFaces\CustomerNotification\EmailService\obj\Debug\net5.0\EmailService.AssemblyInfo.cs
+C:\Users\olowoyinka\source\repos\FacesAndFaces\CustomerNotification\EmailService\obj\Debug\net5.0\EmailService.csproj.CoreCompileInputs.cache
+C:\Users\olowoyinka\source\repos\FacesAndFaces\CustomerNotification\EmailService\obj\Debug\net5.0\EmailService.dll
+C:\Users\olowoyinka\source\repos\FacesAndFaces\CustomerNotification\EmailService\obj\Debug\net5.0\ref\EmailService.dll
+C:\Users\olowoyinka\source\repos\FacesAndFaces\CustomerNotification\EmailService\obj\Debug\net5.0\EmailService.pdb
