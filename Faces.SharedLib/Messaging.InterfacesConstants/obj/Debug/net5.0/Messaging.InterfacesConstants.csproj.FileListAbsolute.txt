@@ -9,3 +9,4 @@ C:\Users\olowoyinka\source\repos\FacesAndFaces\Faces.SharedLib\Messaging.Interfa
 C:\Users\olowoyinka\source\repos\FacesAndFaces\Faces.SharedLib\Messaging.InterfacesConstants\obj\Debug\net5.0\Messaging.InterfacesConstants.pdb
 C:\Users\olowoyinka\source\repos\FacesAndFaces\Faces.SharedLib\Messaging.InterfacesConstants\obj\Debug\net5.0\ref\Messaging.InterfacesConstants.dll
 C:\Users\olowoyinka\source\repos\FacesAndFaces\Faces.SharedLib\Messaging.InterfacesConstants\bin\Debug\net5.0\ref\Messaging.InterfacesConstants.dll
+C:\Users\olowoyinka\source\repos\FacesAndFaces\Faces.SharedLib\Messaging.InterfacesConstants\obj\Debug\net5.0\Messaging.InterfacesConstants.csproj.AssemblyReference.cache

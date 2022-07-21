@@ -49,10 +49,10 @@ namespace OrdersApi.Messages.Consumers
 
                 var client = _clientFactory.CreateClient();
 
-                Tuple<List<byte[]>, Guid> orderDetailData = await GetFacesFromFaceApiAsync(client, result.ImageData, result.OrderId);
+                //Tuple<List<byte[]>, Guid> orderDetailData = await GetFacesFromFaceApiAsync(client, result.ImageData, result.OrderId);
 
-                List<byte[]> faces = orderDetailData.Item1;
-                Guid orderId = orderDetailData.Item2;
+                List<byte[]> faces = null;
+                Guid orderId = result.OrderId;
 
                 SaveOrderDetails(orderId, faces);
 
@@ -91,16 +91,16 @@ namespace OrdersApi.Messages.Consumers
             {
                 order.Status = Status.Processed;
 
-                foreach (var face in faces)
-                {
-                    var orderDetail = new OrderDetail
-                    {
-                        OrderId = orderId,
-                        FaceData = face
-                    };
+                //foreach (var face in faces)
+                //{
+                //    var orderDetail = new OrderDetail
+                //    {
+                //        OrderId = orderId,
+                //        FaceData = face
+                //    };
 
-                    order.OrderDetails.Add(orderDetail);
-                }
+                //    order.OrderDetails.Add(orderDetail);
+                //}
 
                 _orderRepo.UpdateOrder(order);
             }

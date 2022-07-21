@@ -3,9 +3,10 @@ services:
     build:
       context: C:\Users\olowoyinka\source\repos\FacesAndFaces
       dockerfile: Faces/FacesApi/Dockerfile
+    container_name: FacesApi
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-    image: facesapi
+    image: facesapi:dev
     ports:
     - published: 5300
       target: 80
@@ -13,6 +14,7 @@ services:
     build:
       context: C:\Users\olowoyinka\source\repos\FacesAndFaces
       dockerfile: Faces.Web/Faces.WebMvc/Dockerfile
+    container_name: FacesWebMvc
     depends_on:
       ordersapi:
         condition: service_started
@@ -22,7 +24,7 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       OrdersApiUrl: http://ordersapi
       SignalRHubUrl: http://localhost:5200
-    image: faceswebmvc
+    image: faceswebmvc:dev
     ports:
     - published: 5100
       target: 80
@@ -30,16 +32,18 @@ services:
     build:
       context: C:\Users\olowoyinka\source\repos\FacesAndFaces
       dockerfile: CustomerNotification/NotificationService/Dockerfile
+    container_name: NotificationService
     depends_on:
       rabbitmq:
         condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-    image: notificationservice
+    image: notificationservice:dev
   ordersapi:
     build:
       context: C:\Users\olowoyinka\source\repos\FacesAndFaces
       dockerfile: Ordering/OrdersApi/Dockerfile
+    container_name: OrdersApi
     depends_on:
       facesapi:
         condition: service_started
@@ -51,7 +55,7 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       FacesApiUrl: http://facesapi
       OrdersContextConnection: server=sqldbService;Database=OrdersApiDb;User Id=sa;Password=BigPassw0rd
-    image: ordersapi
+    image: ordersapi:dev
     ports:
     - published: 5200
       target: 80
