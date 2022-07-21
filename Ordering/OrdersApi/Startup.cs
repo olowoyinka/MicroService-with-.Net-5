@@ -26,9 +26,10 @@ namespace OrdersApi
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<OrderSettings>(Configuration);
             services.AddDbContext<OrdersContext>(options => options.UseSqlServer
             (
-                Configuration.GetConnectionString("OrdersContextConnection")
+                Configuration["OrdersContextConnection"]
             ));
 
             services.AddSignalR()
@@ -51,7 +52,7 @@ namespace OrdersApi
             services.AddSingleton(provider => Bus.Factory.CreateUsingRabbitMq(
                 cfg =>
                 {
-                    var host = cfg.Host("localhost", "/", h => { });
+                    var host = cfg.Host("rabbitmq", "/", h => { });
 
                     cfg.ReceiveEndpoint(RabbitMqMassTransitConstants.RegisterOrderCommandQueue, e =>
                     {
@@ -106,6 +107,9 @@ namespace OrdersApi
                 endpoints.MapControllers();
                 endpoints.MapHub<OrderHub>("/orderhub");
             });
+
+            using var scope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
+            scope.ServiceProvider.GetService<OrdersContext>().MigrateDB();
         }
     }
 }

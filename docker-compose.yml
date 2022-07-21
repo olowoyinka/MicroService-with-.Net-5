@@ -1,0 +1,62 @@
+version: '3.4'
+
+
+services:
+  notificationservice:
+    image: notificationservice:dev
+    container_name: NotificationService
+    build:
+      context: .
+      dockerfile: CustomerNotification/NotificationService/Dockerfile
+    depends_on:
+      - rabbitmq
+
+
+  facesapi:
+    image: facesapi:dev
+    container_name: FacesApi
+    build:
+      context: .
+      dockerfile: Faces/FacesApi/Dockerfile
+
+
+  faceswebmvc:
+    image: faceswebmvc:dev
+    container_name: FacesWebMvc
+    build:
+      context: .
+      dockerfile: Faces.Web/Faces.WebMvc/Dockerfile
+    depends_on:
+      - rabbitmq
+      - ordersapi
+
+
+  ordersapi:
+    image: ordersapi:dev
+    container_name: OrdersApi
+    build:
+      context: .
+      dockerfile: Ordering/OrdersApi/Dockerfile
+    depends_on:
+      - sqldbService
+      - rabbitmq
+      - facesapi
+
+
+  sqldbService:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: "BigPassw0rd"
+    ports:
+      - "1403:1433"
+
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmqFace
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+

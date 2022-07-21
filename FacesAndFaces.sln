@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Faces.SharedLib", "Faces.Sh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messaging.InterfacesConstants", "Faces.SharedLib\Messaging.InterfacesConstants\Messaging.InterfacesConstants.csproj", "{C1A53F77-4E69-4C28-9178-8180764DF9A6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Faces.Web", "Faces.Web", "{2FE935B9-06DE-4DA7-9690-A7B2D9E3D356}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FacesWeb", "FacesWeb", "{2FE935B9-06DE-4DA7-9690-A7B2D9E3D356}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faces.WebMvc", "Faces.Web\Faces.WebMvc\Faces.WebMvc.csproj", "{1AEA3EA1-FEF3-4101-BCCB-FA81D0E6DAD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacesWebMvc", "Faces.Web\Faces.WebMvc\FacesWebMvc.csproj", "{1AEA3EA1-FEF3-4101-BCCB-FA81D0E6DAD1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{492E6310-9090-4AED-820D-B5998609C0A8}"
 EndProject
@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdersApi", "Ordering\Order
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomerNotification", "CustomerNotification", "{D1D324DB-B870-47BF-98EE-A76282024EAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "CustomerNotification\NotificationService\NotificationService.csproj", "{2729AD0A-F72C-43C8-AB6E-CA00B48BCE2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationService", "CustomerNotification\NotificationService\NotificationService.csproj", "{2729AD0A-F72C-43C8-AB6E-CA00B48BCE2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailService", "CustomerNotification\EmailService\EmailService.csproj", "{953AEBAC-CF4B-4834-8054-7A6D7BE56B44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailService", "CustomerNotification\EmailService\EmailService.csproj", "{953AEBAC-CF4B-4834-8054-7A6D7BE56B44}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{B214A959-5B19-451A-B5C9-99B8A6733B57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{953AEBAC-CF4B-4834-8054-7A6D7BE56B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{953AEBAC-CF4B-4834-8054-7A6D7BE56B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{953AEBAC-CF4B-4834-8054-7A6D7BE56B44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B214A959-5B19-451A-B5C9-99B8A6733B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B214A959-5B19-451A-B5C9-99B8A6733B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B214A959-5B19-451A-B5C9-99B8A6733B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B214A959-5B19-451A-B5C9-99B8A6733B57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

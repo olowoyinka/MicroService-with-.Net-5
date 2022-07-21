@@ -5311,9 +5311,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\olowoyinka\\source\\repos\\FacesAndFaces\\Faces.Web\\Faces.WebMvc\\Faces.WebMvc.csproj",
-      "projectName": "Faces.WebMvc",
-      "projectPath": "C:\\Users\\olowoyinka\\source\\repos\\FacesAndFaces\\Faces.Web\\Faces.WebMvc\\Faces.WebMvc.csproj",
+      "projectUniqueName": "C:\\Users\\olowoyinka\\source\\repos\\FacesAndFaces\\Faces.Web\\Faces.WebMvc\\FacesWebMvc.csproj",
+      "projectName": "FacesWebMvc",
+      "projectPath": "C:\\Users\\olowoyinka\\source\\repos\\FacesAndFaces\\Faces.Web\\Faces.WebMvc\\FacesWebMvc.csproj",
       "packagesPath": "C:\\Users\\olowoyinka\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\olowoyinka\\source\\repos\\FacesAndFaces\\Faces.Web\\Faces.WebMvc\\obj\\",
       "projectStyle": "PackageReference",

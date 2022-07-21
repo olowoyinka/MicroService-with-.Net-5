@@ -1,9 +1,8 @@
 ﻿using EmailService;
 using MassTransit;
 using Messaging.InterfacesConstants.Events;
+using SixLabors.ImageSharp;
 using System;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -35,9 +34,9 @@ namespace NotificationService.Consumer
                 {
                     MemoryStream ms = new MemoryStream(face);
 
-                    var image = Image.FromStream(ms);
+                    var image = Image.Load(ms.ToArray());
 
-                    image.Save(rootFolder + "/Images/face" + j + ".jpg", ImageFormat.Jpeg);
+                    image.Save(rootFolder + "/Images/face" + j + ".jpg");
 
                     j++;
                 }

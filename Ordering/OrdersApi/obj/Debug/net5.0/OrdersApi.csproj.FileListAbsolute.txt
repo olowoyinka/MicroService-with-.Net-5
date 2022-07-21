@@ -66,3 +66,4 @@ C:\Users\olowoyinka\source\repos\FacesAndFaces\Ordering\OrdersApi\obj\Debug\net5
 C:\Users\olowoyinka\source\repos\FacesAndFaces\Ordering\OrdersApi\obj\Debug\net5.0\OrdersApi.pdb
 C:\Users\olowoyinka\source\repos\FacesAndFaces\Ordering\OrdersApi\obj\Debug\net5.0\OrdersApi.genruntimeconfig.cache
 C:\Users\olowoyinka\source\repos\FacesAndFaces\Ordering\OrdersApi\bin\Debug\net5.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\olowoyinka\source\repos\FacesAndFaces\Ordering\OrdersApi\bin\Debug\net5.0\Polly.dll

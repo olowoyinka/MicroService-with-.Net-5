@@ -2,6 +2,7 @@
 using Messaging.InterfacesConstants.Commands;
 using Messaging.InterfacesConstants.Events;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using OrdersApi.Hubs;
 using OrdersApi.Models;
@@ -22,13 +23,17 @@ namespace OrdersApi.Messages.Consumers
 
         private readonly IHubContext<OrderHub> _hubContext;
 
+        private readonly IOptions<OrderSettings> _settings;
+
         public RegisterOrderCommandConsumer(IOrderRepository orderRepo,
                                                 IHttpClientFactory clientFactory,
-                                                IHubContext<OrderHub> hubContext)
+                                                IHubContext<OrderHub> hubContext,
+                                                IOptions<OrderSettings> settings)
         {
             _orderRepo = orderRepo;
             _clientFactory = clientFactory;
             _hubContext = hubContext;
+            _settings = settings;
         }
 
         public async Task Consume(ConsumeContext<IRegisterOrderCommand> context)
@@ -69,7 +74,7 @@ namespace OrdersApi.Messages.Consumers
             Tuple<List<byte[]>, Guid> orderDetailData = null;
             byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
 
-            using (var response = await client.PostAsync("http://localhost:6000/api/faces?orderId=" + orderId, byteContent))
+            using (var response = await client.PostAsync(_settings.Value.FacesApiUrl+"/api/faces?orderId=" + orderId, byteContent))
             {
                 string apiResponse = await response.Content.ReadAsStringAsync();
                 orderDetailData = JsonConvert.DeserializeObject<Tuple<List<byte[]>, Guid>>(apiResponse);

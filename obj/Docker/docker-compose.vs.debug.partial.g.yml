@@ -1,0 +1,107 @@
+version: '3.4'
+
+services:
+  facesapi:
+    image: facesapi:dev
+    container_name: FacesApi
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "FacesApi"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_facesapi$
+    volumes:
+      - C:\Users\olowoyinka\source\repos\FacesAndFaces\Faces\FacesApi:/app
+      - C:\Users\olowoyinka\source\repos\FacesAndFaces:/src
+      - C:\Users\olowoyinka\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_facesapi$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_facesapi$ \"/app/bin/Debug/net5.0/FacesApi.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+  faceswebmvc:
+    image: faceswebmvc:dev
+    container_name: FacesWebMvc
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "FacesWebMvc"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_faceswebmvc$
+    volumes:
+      - C:\Users\olowoyinka\source\repos\FacesAndFaces\Faces.Web\Faces.WebMvc:/app
+      - C:\Users\olowoyinka\source\repos\FacesAndFaces:/src
+      - C:\Users\olowoyinka\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_faceswebmvc$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_faceswebmvc$ \"/app/bin/Debug/net5.0/FacesWebMvc.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  notificationservice:
+    image: notificationservice:dev
+    container_name: NotificationService
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "NotificationService"
+    #environment:
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_notificationservice$
+    volumes:
+      - C:\Users\olowoyinka\source\repos\FacesAndFaces\CustomerNotification\NotificationService:/app
+      - C:\Users\olowoyinka\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_notificationservice$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_notificationservice$ \"/app/bin/Debug/net5.0/NotificationService.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  ordersapi:
+    image: ordersapi:dev
+    container_name: OrdersApi
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "OrdersApi"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_ordersapi$
+    volumes:
+      - C:\Users\olowoyinka\source\repos\FacesAndFaces\Ordering\OrdersApi:/app
+      - C:\Users\olowoyinka\source\repos\FacesAndFaces:/src
+      - C:\Users\olowoyinka\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_ordersapi$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_ordersapi$ \"/app/bin/Debug/net5.0/OrdersApi.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true

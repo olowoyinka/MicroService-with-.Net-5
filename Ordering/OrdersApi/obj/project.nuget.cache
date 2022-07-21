@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MbYBgddnbTS+sD7MmY12SXwzUsxjlYadsj6VCllAtL8C/YPioNPBGpc1UpIsgoXSnrZe/OPzDn0h24TMQo8nag==",
+  "dgSpecHash": "prs3FNiVCNeUsAqXzv39mj64rZ86pqXtvf94leskEKj3ROdKhcr5BD6212Mq6uMGZvWIW0u/ex5Eo+S7Blz5yQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\olowoyinka\\source\\repos\\FacesAndFaces\\Ordering\\OrdersApi\\OrdersApi.csproj",
   "expectedPackageFiles": [
@@ -70,6 +70,7 @@
     "C:\\Users\\olowoyinka\\.nuget\\packages\\newid\\3.0.2\\newid.3.0.2.nupkg.sha512",
     "C:\\Users\\olowoyinka\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
+    "C:\\Users\\olowoyinka\\.nuget\\packages\\polly\\7.2.3\\polly.7.2.3.nupkg.sha512",
     "C:\\Users\\olowoyinka\\.nuget\\packages\\rabbitmq.client\\5.2.0\\rabbitmq.client.5.2.0.nupkg.sha512",
     "C:\\Users\\olowoyinka\\.nuget\\packages\\refit\\5.1.67\\refit.5.1.67.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

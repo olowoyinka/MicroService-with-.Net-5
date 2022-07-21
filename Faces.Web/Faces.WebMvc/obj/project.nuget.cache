@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cp6462yEwOyjO0fPvYW/p0y88Bdcn4aw4CVEUPpmTdajksvbJ+Zph3w7GwY5R3jpRMoYTTErA7RjeyosEI9rAw==",
+  "dgSpecHash": "Wi+KW1V9jADzCFrbYprih+jCwmCan5zYzrDAgiS6hYuSyr9DLeaU872G9eQ9GbTGEnNbifhL42vf+BX0SeWaOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\olowoyinka\\source\\repos\\FacesAndFaces\\Faces.Web\\Faces.WebMvc\\Faces.WebMvc.csproj",
+  "projectFilePath": "C:\\Users\\olowoyinka\\source\\repos\\FacesAndFaces\\Faces.Web\\Faces.WebMvc\\FacesWebMvc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\olowoyinka\\.nuget\\packages\\automatonymous\\4.2.1\\automatonymous.4.2.1.nupkg.sha512",
     "C:\\Users\\olowoyinka\\.nuget\\packages\\greenpipes\\3.0.1\\greenpipes.3.0.1.nupkg.sha512",

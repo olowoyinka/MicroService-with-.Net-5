@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zLUbldUiCwsVsEpr30V2pPtqmF3T51vGCqH3RvADPZzwEFyJjv1u+9sOkMWDrXYi4OtTty+9kRVMLjOZmiTQaQ==",
+  "dgSpecHash": "PHd5D1FkZYdVFVK42rbY+mrfmVfWYjiOGuM5X+Xg8FBRv8LjPcpJizbpllU8Df8zpbdjt1hPbD52RBZawWgTLQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\olowoyinka\\source\\repos\\FacesAndFaces\\Faces\\FacesApi\\FacesApi.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\olowoyinka\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.20\\microsoft.rest.clientruntime.2.3.20.nupkg.sha512",
     "C:\\Users\\olowoyinka\\.nuget\\packages\\microsoft.rest.clientruntime.azure\\3.3.18\\microsoft.rest.clientruntime.azure.3.3.18.nupkg.sha512",
+    "C:\\Users\\olowoyinka\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\olowoyinka\\.nuget\\packages\\newtonsoft.json\\10.0.3\\newtonsoft.json.10.0.3.nupkg.sha512",

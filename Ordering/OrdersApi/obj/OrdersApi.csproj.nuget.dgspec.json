@@ -144,6 +144,10 @@
               "target": "Package",
               "version": "[1.10.14, )"
             },
+            "Polly": {
+              "target": "Package",
+              "version": "[7.2.3, )"
+            },
             "Refit": {
               "target": "Package",
               "version": "[5.1.67, )"

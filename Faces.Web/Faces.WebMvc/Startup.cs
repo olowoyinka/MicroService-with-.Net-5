@@ -36,12 +36,14 @@ namespace Faces.WebMvc
             //});
             //services.AddMassTransitHostedService();
 
+            services.Configure<AppSettings>(Configuration);
+
             services.AddMassTransit();
 
             services.AddSingleton(provider => Bus.Factory.CreateUsingRabbitMq(
                 cfg =>
                 {
-                    var host = cfg.Host("localhost", "/", h => { });
+                    var host = cfg.Host("rabbitmq", "/", h => { });
                     services.AddSingleton(provider => provider.GetRequiredService<IBusControl>());
                     services.AddSingleton<IHostedService, BusService>();
                 }));

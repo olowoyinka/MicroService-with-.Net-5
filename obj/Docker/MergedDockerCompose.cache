@@ -1,0 +1,75 @@
+services:
+  facesapi:
+    build:
+      context: C:\Users\olowoyinka\source\repos\FacesAndFaces
+      dockerfile: Faces/FacesApi/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: facesapi
+    ports:
+    - published: 5300
+      target: 80
+  faceswebmvc:
+    build:
+      context: C:\Users\olowoyinka\source\repos\FacesAndFaces
+      dockerfile: Faces.Web/Faces.WebMvc/Dockerfile
+    depends_on:
+      ordersapi:
+        condition: service_started
+      rabbitmq:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      OrdersApiUrl: http://ordersapi
+      SignalRHubUrl: http://localhost:5200
+    image: faceswebmvc
+    ports:
+    - published: 5100
+      target: 80
+  notificationservice:
+    build:
+      context: C:\Users\olowoyinka\source\repos\FacesAndFaces
+      dockerfile: CustomerNotification/NotificationService/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: notificationservice
+  ordersapi:
+    build:
+      context: C:\Users\olowoyinka\source\repos\FacesAndFaces
+      dockerfile: Ordering/OrdersApi/Dockerfile
+    depends_on:
+      facesapi:
+        condition: service_started
+      rabbitmq:
+        condition: service_started
+      sqldbService:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      FacesApiUrl: http://facesapi
+      OrdersContextConnection: server=sqldbService;Database=OrdersApiDb;User Id=sa;Password=BigPassw0rd
+    image: ordersapi
+    ports:
+    - published: 5200
+      target: 80
+  rabbitmq:
+    container_name: rabbitmqFace
+    image: rabbitmq:3-management
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+  sqldbService:
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: BigPassw0rd
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    ports:
+    - published: 1403
+      target: 1433
+version: '3.4'
